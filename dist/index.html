@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./img/favicon.png">
     <title>Главная</title>
-	<link rel="stylesheet" href="css/style.css?_v=20240603165811">
+	<link rel="stylesheet" href="css/style.css?_v=20240603192925">
 </head>
 <body>
     <div class="wrapper" id="app" :class="{isMobile, isTablet}">
         <header class="header">
+    <div class="header__star mouse-parallax-fog-2">
+        <img src="./img/star.svg" alt="">
+    </div>
     <nav class="header__menu" v-if="sizes.window > 1023">
         <ul>
             <li><a href="#cap_slide">Кепки</a></li>
@@ -38,6 +41,9 @@
 </header>
         <main class="content">
             <div class="main_menus">
+    <div class="main_menus__icon" v-if="sizes.window > 1023">
+        <picture><source srcset="./img/tube.webp" type="image/webp"><img src="./img/tube.png" alt=""></picture>
+    </div>
     <div class="main_menus__in center_block">
         <div class="main_menus__l-side">
             <div class="main_menus__title">Посмотрите все наши товары:</div>
@@ -1095,6 +1101,6 @@
     </div>
 </div>
     </div>
-    <script src="js/app.min.js?_v=20240603165811"></script>
+    <script src="js/app.min.js?_v=20240603192925"></script>
 </body>
 </html>

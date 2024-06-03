@@ -2,10 +2,24 @@
     background: url(../img/bg_slide.png) 0 0 / cover no-repeat;
     overflow: hidden;
     padding-top: vw(65);
+    position: relative;
     padding-bottom: vw(65);
+    @media all and (max-width: 1023px) {
+        padding-top: 0px;
+        margin-top: -30px;
+        padding-bottom: 0px;
+        background: url(../img/bg_slide_mob.png) 0 0 / cover no-repeat;
+    }
+    @media all and (max-width: 640px) {
+        background: url(../img/bg_slide_mob.png) 0 0 / cover no-repeat;
+    }
     &__in {
         padding-top: vw(80);
         padding-bottom: vw(80);
+        @media all and (max-width: 1023px) {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
         &--cap, &--badges {
             border-bottom: 1px solid rgba(30, 30, 28, 0.1);
         }
@@ -29,6 +43,10 @@
         text-transform: uppercase;
         color: #1e1e1c;
         margin-bottom: vw(40);
+        @media all and (max-width: 1023px) {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
     }
     &__blocks {
         & > .slick-list {
@@ -36,11 +54,19 @@
             & > .slick-track {
                 margin-left: vw(-15);
                 margin-right: vw(-15);
+                @media all and (max-width: 1023px) {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
                 & > .slick-slide {
                     margin-left: vw(15);
                     margin-right: vw(15);
                     opacity: 0.2;
                     pointer-events: none;
+                    @media all and (max-width: 1023px) {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
                     &.slick-active {
                         opacity: 1;
                         pointer-events: all;
@@ -67,6 +93,13 @@
             &:active {
                 background: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='41.5' y='41.5' width='41' height='41' transform='rotate(180 41.5 41.5)' fill='%23343434' stroke='%23575756' /%3E%3Cpath d='M14.4697 20.4697C14.1768 20.7626 14.1768 21.2374 14.4697 21.5303L19.2426 26.3033C19.5355 26.5962 20.0104 26.5962 20.3033 26.3033C20.5962 26.0104 20.5962 25.5355 20.3033 25.2426L16.0607 21L20.3033 16.7574C20.5962 16.4645 20.5962 15.9896 20.3033 15.6967C20.0104 15.4038 19.5355 15.4038 19.2426 15.6967L14.4697 20.4697ZM28 20.25L15 20.25L15 21.75L28 21.75L28 20.25Z' fill='white' /%3E%3C/svg%3E") 50% / 100% no-repeat;
             }
+            @media all and (max-width: 1023px) {
+                top: 127px;
+                width: 36px;
+                height: 36px;
+                left: -15px;
+                margin-top: 0;
+            }
         }
         & > .slick-next {
             width: vw(42);
@@ -82,6 +115,13 @@
             right: 0;
             top: 50%;
             margin-top: vw(-42);
+            @media all and (max-width: 1023px) {
+                top: 127px;
+                width: 36px;
+                height: 36px;
+                right: -15px;
+                margin-top: 0;
+            }
             &:hover {
                 background: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='41.5' y='41.5' width='41' height='41' transform='rotate(180 41.5 41.5)' fill='%23575756' stroke='%23575756' /%3E%3Cpath d='M14.4697 20.4697C14.1768 20.7626 14.1768 21.2374 14.4697 21.5303L19.2426 26.3033C19.5355 26.5962 20.0104 26.5962 20.3033 26.3033C20.5962 26.0104 20.5962 25.5355 20.3033 25.2426L16.0607 21L20.3033 16.7574C20.5962 16.4645 20.5962 15.9896 20.3033 15.6967C20.0104 15.4038 19.5355 15.4038 19.2426 15.6967L14.4697 20.4697ZM28 20.25L15 20.25L15 21.75L28 21.75L28 20.25Z' fill='white' /%3E%3C/svg%3E") 50% / 100% no-repeat;
             }
@@ -97,18 +137,29 @@
             padding: 0;
             margin: 0;
             margin-top: vw(40);
+            @media all and (max-width: 1023px) {
+                margin-top: 30px;
+            }
             li {
                 padding: 0;
                 margin: 0;
                 cursor: pointer;
                 margin-left: vw(5);
                 margin-right: vw(5);
+                @media all and (max-width: 1023px) {
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
                 button {
                     display: none;
                 }
                 width: vw(10);
                 height: vw(10);
                 background: #fff;
+                @media all and (max-width: 1023px) {
+                    width: 10px;
+                    height: 10px;
+                }
                 &.slick-active {
                     background: #575756;
                 }
@@ -118,15 +169,28 @@
     &__block {
         display: flex !important;
         background: #fff;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+        }
     }
     &__l-side {
         width: calc(100% - vw(290));
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
     }
     &__imgs {
         width: vw(292);
         height: vw(292);
         margin-bottom: vw(20);
         font-size: 0;
+        @media all and (max-width: 1023px) {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            width: 290px;
+            height: 290px;
+        }
         .slick-slide {
             margin: 0 !important;
         }
@@ -140,6 +204,17 @@
         font-size: 0;
         padding-left: vw(11);
         padding-right: vw(11);
+        @media all and (max-width: 1023px) {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 238px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+            margin-top: -79px;
+        }
         img {
             width: 100%;
             height: 100%;
@@ -148,11 +223,19 @@
         .slick-track {
             margin-left: vw(-4);
             margin-right: vw(-4);
+            @media all and (max-width: 1023px) {
+                margin-left: -4px;
+                margin-right: -4px;
+            }
         }
         .slick-slide {
             margin-left: vw(4) !important;
             margin-right: vw(4) !important;
             border: 2px solid #fff;
+            @media all and (max-width: 1023px) {
+                margin-left: 4px !important;
+                margin-right: 4px !important;
+            }
             &.slick-current.slick-active {
                 border-color: #575756;
             }
@@ -164,6 +247,11 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        @media all and (max-width: 1023px) {
+            flex: none;
+            padding: 30px 25px;
+            margin-top: 30px;
+        }
     }
     &__tit {
         margin-bottom: vw(20);
@@ -173,19 +261,32 @@
         letter-spacing: 0.05em;
         text-transform: uppercase;
         color: #1e1e1c;
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
     }
     &__list {
         list-style: none;
         padding: 0;
         margin: 0;
         margin-bottom: vw(20);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+        }
         li {
             font-weight: 400;
             font-size: vw(14);
             letter-spacing: 0.02em;
             color: #1e1e1c;
+            @media all and (max-width: 1023px) {
+                font-size: 14px;
+            }
             &:not(:last-child) {
                 margin-bottom: vw(8);
+                @media all and (max-width: 1023px) {
+                    margin-bottom: 8px;
+                }
             }
         }
     }
@@ -200,6 +301,11 @@
         padding-right: vw(10);
         cursor: pointer;
         text-decoration: none;
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+            padding-right: 10px;
+            font-size: 14px;
+        }
         &:before {
             content: '';
             position: absolute;
@@ -209,6 +315,11 @@
             width: vw(8);
             height: vw(8);
             margin-top: vw(-4);
+            @media all and (max-width: 1023px) {
+                width: 8px;
+                height: 8px;
+                margin-top: -4px;
+            }
         }
     }
     &__button {
@@ -246,6 +357,9 @@
             border-color: #005cfe;
             color: #fff;
             margin-bottom: vw(16);
+            @media all and (max-width: 1023px) {
+                margin-bottom: 12px;
+            }
             &:hover {
                 background: #2b76fb;
                 border-color: #005cfe;

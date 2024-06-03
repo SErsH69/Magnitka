@@ -3,9 +3,19 @@
     padding-top: vw(125);
     padding-bottom: vw(205);
     margin-bottom: vw(-100);
+    position: relative;
     @media all and (max-width: 1023px) {
         padding-top: 70px;
         padding-bottom: 70px;
+    }
+    &__icon {
+        position: absolute;
+        right: vw(64);
+        bottom: 0;
+        z-index: 3;
+        pointer-events: none;
+        width: vw(228);
+        height: vw(228);
     }
     &__in {
         display: flex;

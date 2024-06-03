@@ -10,22 +10,38 @@ const MainSlider = class MainSlider {
                 slidesToScroll: 1,
                 arrows: true,
                 infinite: false,
-                dots: true
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 1023,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            infinite: true
+                        }
+                    }
+                ]
             });
-            $('.slider-for').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                fade: true,
-                asNavFor: '.slider-nav'
-            });
-            $('.slider-nav').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                asNavFor: '.slider-for',
-                dots: false,
-                arrows: false,
-                focusOnSelect: true
+            $('.main_slider__block').each(function() {
+                var $sliderFor = $(this).find('.slider-for');
+                var $sliderNav = $(this).find('.slider-nav');
+        
+                $sliderFor.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    fade: true,
+                    asNavFor: $sliderNav
+                });
+        
+                $sliderNav.slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    asNavFor: $sliderFor,
+                    dots: false,
+                    arrows: false,
+                    focusOnSelect: true
+                });
             });
         });
     }
