@@ -93,6 +93,26 @@
             object-fit: cover;
         }
     }
+    &__text {
+        font-weight: 300;
+        font-size: vw(14);
+        line-height: 143%;
+        letter-spacing: 0.02em;
+        color: #1e1e1c;
+        margin-bottom: vw(20);
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
     &__img {
         font-size: 0;
         position: relative;

@@ -3047,6 +3047,23 @@ textarea {
      object-fit: cover;
 }
 
+.modal__text {
+  font-weight: 300;
+  font-size: 0.7291666667vw;
+  line-height: 143%;
+  letter-spacing: 0.02em;
+  color: #1e1e1c;
+  margin-bottom: 1.0416666667vw;
+}
+
+.modal__text p:first-child {
+  margin-top: 0;
+}
+
+.modal__text p:last-child {
+  margin-bottom: 0;
+}
+
 .modal__img {
   font-size: 0;
   position: relative;
@@ -3639,6 +3656,11 @@ textarea {
     margin-bottom: 0;
     width: 290px;
     height: 290px;
+  }
+
+  .modal__text {
+    font-size: 14px;
+    margin-bottom: 20px;
   }
 
   .modal__img:before {
