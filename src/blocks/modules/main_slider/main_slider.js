@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
+import lightGallery from 'lightgallery';
+
 const MainSlider = class MainSlider {
     constructor(){}
     initSlider() {
@@ -43,6 +45,14 @@ const MainSlider = class MainSlider {
                     focusOnSelect: true
                 });
             });
+
+            const lightgalleryElements = document.querySelectorAll('.lightgallery');
+            for (let i = 0; i < lightgalleryElements.length; i++) {
+                lightGallery(lightgalleryElements[i], {
+                    speed: 500,
+                    selector: '.main_slider__img img'
+                });
+            }
         });
     }
     init() {
