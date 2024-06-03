@@ -15,6 +15,9 @@
         opacity: 1;
         visibility: visible;
     }
+    @media all and (max-width: 1023px) {
+        padding-top: 72px;
+    }
     &:after {
         content: "";
         display: inline-block;
@@ -25,34 +28,235 @@
         max-height: 100%;
         display: inline-block;
         vertical-align: middle;
-        max-width: vw(603);
+        max-width: vw(990);
         text-align: left;
         width: 100%;
-        background: #F6F7F9;
-        border-radius: vw(16);
+        background: #fff;
         position: relative;
-        padding: vw(48);
         box-shadow: 0px 9px 19px 0px rgba(0, 0, 0, 0.10), 0px 35px 35px 0px rgba(0, 0, 0, 0.09), 0px 80px 48px 0px rgba(0, 0, 0, 0.05), 0px 141px 57px 0px rgba(0, 0, 0, 0.01), 0px 221px 62px 0px rgba(0, 0, 0, 0.00);
         @media all and (max-width: 1023px) {
             max-width: 603px;
-            border-radius: 16px;
-            overflow: auto;
-            padding: 32px 16px;
+            padding: 30px 25px;
         }
     }
     &__closer {
         position: absolute;
-        top: vw(24);
-        right: vw(24);
+        top: vw(-34);
+        right: 0;
         cursor: pointer;
         width: vw(24);
+        border-radius: 50%;
         height: vw(24);
-        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M12 4L4 12M4 4L12 12' stroke='%23666666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+        background: #000 url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 1.5C6.15 1.5 1.5 6.15 1.5 12C1.5 17.85 6.15 22.5 12 22.5C17.85 22.5 22.5 17.85 22.5 12C22.5 6.15 17.85 1.5 12 1.5ZM12 21C7.05 21 3 16.95 3 12C3 7.05 7.05 3 12 3C16.95 3 21 7.05 21 12C21 16.95 16.95 21 12 21Z' fill='white' fill-opacity='0.8' /%3E%3Cpath d='M16.05 17.25L12 13.2L7.95 17.25L6.75 16.05L10.8 12L6.75 7.95L7.95 6.75L12 10.8L16.05 6.75L17.25 7.95L13.2 12L17.25 16.05L16.05 17.25Z' fill='white' fill-opacity='0.8' /%3E%3C/svg%3E") 50% / 100% no-repeat;
         @media all and (max-width: 1023px) {
-            top: 24px;
-            right: 16px;
+            top: -34px;
+            right: 0px;
             width: 24px;
             height: 24px;
+        }
+    }
+    &__block {
+        display: flex !important;
+        background: #fff;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+            overflow: auto;
+            height: calc(100vh - 180px);
+        }
+    }
+    &__l-side {
+        flex: 0 0 vw(378);
+        width: vw(378);
+        background: #e1e1e1;
+        @media all and (max-width: 1023px) {
+            display: none;
+        }
+    }
+    &__imgs {
+        width: vw(378);
+        height: vw(378);
+        margin-bottom: vw(20);
+        font-size: 0;
+        @media all and (max-width: 1023px) {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0;
+            width: 290px;
+            height: 290px;
+        }
+        .slick-slide {
+            margin: 0 !important;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__img {
+        font-size: 0;
+        position: relative;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            background: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.7913 24.7913L31.1663 31.1663M10.6247 15.583H20.5413M15.583 10.6247V20.5413M28.333 15.583C28.333 12.2015 26.9897 8.95849 24.5986 6.5674C22.2075 4.17631 18.9645 2.83301 15.583 2.83301C12.2015 2.83301 8.95849 4.17631 6.5674 6.5674C4.17631 8.95849 2.83301 12.2015 2.83301 15.583C2.83301 18.9645 4.17631 22.2075 6.5674 24.5986C8.95849 26.9897 12.2015 28.333 15.583 28.333C18.9645 28.333 22.2075 26.9897 24.5986 24.5986C26.9897 22.2075 28.333 18.9645 28.333 15.583Z' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E") 50% / 100% no-repeat;
+            width: vw(34);
+            height: vw(34);
+            pointer-events: none;
+            top: 50%;
+            left: 50%;
+            margin-top: vw(-16);
+            margin-left: vw(-16);
+            opacity: 0;
+            @media all and (max-width: 1023px) {
+                width: 34px;
+                height: 34px;
+                margin-top: -16px;
+                margin-left: -16px;
+            }
+        }
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+    &__navs {
+        font-size: 0;
+        padding-left: vw(11);
+        padding-right: vw(11);
+        @media all and (max-width: 1023px) {
+            padding-left: 0;
+            padding-right: 0;
+            max-width: 238px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 2;
+            margin-top: -79px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .slick-track {
+            margin-left: vw(-4);
+            margin-right: vw(-4);
+            @media all and (max-width: 1023px) {
+                margin-left: -4px;
+                margin-right: -4px;
+            }
+        }
+        .slick-slide {
+            margin-left: vw(4) !important;
+            margin-right: vw(4) !important;
+            border: 2px solid #fff;
+            @media all and (max-width: 1023px) {
+                margin-left: 4px !important;
+                margin-right: 4px !important;
+            }
+            &.slick-current.slick-active {
+                border-color: #575756;
+            }
+        }
+    }
+    &__r-side {
+        width: 100%;
+        padding: vw(40) vw(30) vw(40) vw(35);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media all and (max-width: 1023px) {
+            flex: none;
+            padding: 0;
+            margin-top: 0;
+            height: 100%;
+        }
+    }
+    &__tit {
+        margin-bottom: vw(20);
+        font-weight: 700;
+        font-size: vw(20);
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #1e1e1c;
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+    }
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: vw(20);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 20px;
+        }
+        li {
+            font-weight: 400;
+            font-size: vw(14);
+            letter-spacing: 0.02em;
+            color: #1e1e1c;
+            @media all and (max-width: 1023px) {
+                font-size: 14px;
+            }
+            &:not(:last-child) {
+                margin-bottom: vw(8);
+                @media all and (max-width: 1023px) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+    }
+    &__button {
+        border: 1px solid #1e1e1c;
+        padding: vw(20) vw(3);
+        font-weight: 600;
+        cursor: pointer;
+        font-size: vw(14);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #1e1e1c;
+        background: transparent;
+        display: block;
+        max-width: vw(276);
+        width: 100%;
+        white-space: nowrap;
+        text-decoration: none;
+        text-align: center;
+        @media all and (max-width: 1023px) {
+            font-size: 14px;
+            padding: 20px 10px;
+            margin-bottom: 12px;
+            max-width: 100%;
+        }
+        &:hover {
+            background: #005cfe;
+            border-color: #005cfe;
+            color: #fff;
+        }
+        &:active {
+            color: #fff;
+            background: #2b76fb;
+            border-color: #005cfe;
+        }
+        &--color {
+            background: #005cfe;
+            border-color: #005cfe;
+            color: #fff;
+            margin-bottom: vw(16);
+            @media all and (max-width: 1023px) {
+                margin-bottom: 12px;
+            }
+            &:hover {
+                background: #2b76fb;
+                border-color: #005cfe;
+            }
         }
     }
 }

@@ -1,3 +1,6 @@
+import $ from 'jquery';
+import 'slick-carousel';
+
 const Modals = class Modals {
     constructor({modalsSelector, modalsOpenerSelector, openedClass}){
         this.modalsSelector = modalsSelector;
@@ -35,10 +38,36 @@ const Modals = class Modals {
             }
         })
     }
+    initSlider() {
+        document.addEventListener('DOMContentLoaded', () => {
+            $('.modal__block').each(function() {
+                var $sliderFor = $(this).find('.slider-for_in');
+                var $sliderNav = $(this).find('.slider-nav_in');
+        
+                $sliderFor.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    fade: true,
+                    asNavFor: $sliderNav
+                });
+        
+                $sliderNav.slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    asNavFor: $sliderFor,
+                    dots: false,
+                    arrows: false,
+                    focusOnSelect: true
+                });
+            });
+        });
+    }
     init() {
         if (!this.modalsSelector && this.modalsOpenerSelector) return;
         this.addClickListener();
         this.addKeyupListener();
+        this.initSlider();
     }
 }
 
