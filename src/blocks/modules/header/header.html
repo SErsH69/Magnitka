@@ -1,0 +1,26 @@
+<header class="header">
+    <nav class="header__menu" v-if="sizes.window > 1023">
+        <ul>
+            <li><a href="#cap_slide">Кепки</a></li>
+            <li><a href="#badges_slide">Значки</a></li>
+            <li><a href="#hats_slide">Шапки</a></li>
+            <li><a href="#clothes_slide">Одежда</a></li>
+        </ul>
+    </nav>
+    <div class="header__burger" :class="{'isOpened': header.isMobileMenuOpened}" v-if="sizes.window <= 1023">
+        <div class="header__burger--icon" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+        <div class="header__burger--body">
+            <nav class="header__burger--menu">
+                <ul>
+                    <li><a @click="header.toogleMobileMenu.apply(header)" href="#cap_slide">Кепки</a></li>
+                    <li><a @click="header.toogleMobileMenu.apply(header)" href="#badges_slide">Значки</a></li>
+                    <li><a @click="header.toogleMobileMenu.apply(header)" href="#hats_slide">Шапки</a></li>
+                    <li><a @click="header.toogleMobileMenu.apply(header)" href="#clothes_slide">Одежда</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header__logo center_block">
+        <img src="./img/logo.svg" alt="">
+    </div>
+</header>

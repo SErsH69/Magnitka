@@ -1,0 +1,58 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.60);
+    z-index: 200;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    padding: 16px;
+    &.isOpened {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:after {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+    &__in {
+        max-height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+        max-width: vw(603);
+        text-align: left;
+        width: 100%;
+        background: #F6F7F9;
+        border-radius: vw(16);
+        position: relative;
+        padding: vw(48);
+        box-shadow: 0px 9px 19px 0px rgba(0, 0, 0, 0.10), 0px 35px 35px 0px rgba(0, 0, 0, 0.09), 0px 80px 48px 0px rgba(0, 0, 0, 0.05), 0px 141px 57px 0px rgba(0, 0, 0, 0.01), 0px 221px 62px 0px rgba(0, 0, 0, 0.00);
+        @media all and (max-width: 1023px) {
+            max-width: 603px;
+            border-radius: 16px;
+            overflow: auto;
+            padding: 32px 16px;
+        }
+    }
+    &__closer {
+        position: absolute;
+        top: vw(24);
+        right: vw(24);
+        cursor: pointer;
+        width: vw(24);
+        height: vw(24);
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M12 4L4 12M4 4L12 12' stroke='%23666666' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+        @media all and (max-width: 1023px) {
+            top: 24px;
+            right: 16px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

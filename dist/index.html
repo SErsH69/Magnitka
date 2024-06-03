@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <title>Главная</title>
+	<link rel="stylesheet" href="css/style.css?_v=20240603165811">
+</head>
+<body>
+    <div class="wrapper" id="app" :class="{isMobile, isTablet}">
+        <header class="header">
+    <nav class="header__menu" v-if="sizes.window > 1023">
+        <ul>
+            <li><a href="#cap_slide">Кепки</a></li>
+            <li><a href="#badges_slide">Значки</a></li>
+            <li><a href="#hats_slide">Шапки</a></li>
+            <li><a href="#clothes_slide">Одежда</a></li>
+        </ul>
+    </nav>
+    <div class="header__burger" :class="{'isOpened': header.isMobileMenuOpened}" v-if="sizes.window <= 1023">
+        <div class="header__burger--icon" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
+        <div class="header__burger--body">
+            <nav class="header__burger--menu">
+                <ul>
+                    <li><a @click="header.toogleMobileMenu.apply(header)" href="#cap_slide">Кепки</a></li>
+                    <li><a @click="header.toogleMobileMenu.apply(header)" href="#badges_slide">Значки</a></li>
+                    <li><a @click="header.toogleMobileMenu.apply(header)" href="#hats_slide">Шапки</a></li>
+                    <li><a @click="header.toogleMobileMenu.apply(header)" href="#clothes_slide">Одежда</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="header__logo center_block">
+        <img src="./img/logo.svg" alt="">
+    </div>
+</header>
+        <main class="content">
+            <div class="main_menus">
+    <div class="main_menus__in center_block">
+        <div class="main_menus__l-side">
+            <div class="main_menus__title">Посмотрите все наши товары:</div>
+            <nav class="main_menus__menu">
+                <ul>
+                    <li><a href="#cap_slide">Кепки</a></li>
+                    <li><a href="#badges_slide">Значки</a></li>
+                    <li><a href="#hats_slide">Шапки</a></li>
+                    <li><a href="#clothes_slide">Одежда</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main_menus__r-side">
+            <div class="main_menus__img">
+                <picture><source srcset="./img/r1.webp" type="image/webp"><img src="./img/r1.jpg" alt=""></picture>
+            </div>
+            <div class="main_menus__img">
+                <picture><source srcset="./img/r2.webp" type="image/webp"><img src="./img/r2.jpg" alt=""></picture>
+            </div>
+            <div class="main_menus__img">
+                <picture><source srcset="./img/r3.webp" type="image/webp"><img src="./img/r3.jpg" alt=""></picture>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="main_slider">
+    <div class="main_slider__in main_slider__in--cap center_block" id="cap_slide">
+        <div class="main_slider__title">Кепки</div>
+        <div class="main_slider__blocks js_slides">
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Кепка Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: Универсальный</li>
+                        <li>Цвет: Красный, зелёный</li>
+                        <li>Состав: Хлопок</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Кепка Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: Универсальный</li>
+                        <li>Цвет: Красный, зелёный</li>
+                        <li>Состав: Хлопок</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Кепка Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: Универсальный</li>
+                        <li>Цвет: Красный, зелёный</li>
+                        <li>Состав: Хлопок</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_slider__in main_slider__in--clothes center_block" id="clothes_slide">
+        <div class="main_slider__title">Одежда</div>
+        <div class="main_slider__blocks js_slides">
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/man2.webp" type="image/webp"><img src="./img/man2.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_slider__in main_slider__in--badges center_block" id="badges_slide">
+        <div class="main_slider__title">Значки</div>
+        <div class="main_slider__blocks js_slides">
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/badg.webp" type="image/webp"><img src="./img/badg.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_slider__in main_slider__in--hats center_block" id="hats_slide">
+        <div class="main_slider__title">Шапки</div>
+        <div class="main_slider__blocks js_slides">
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+            <div class="main_slider__block">
+                <div class="main_slider__l-side">
+                    <div class="main_slider__imgs slider-for">
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__img">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                    <div class="main_slider__navs slider-nav">
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                        <div class="main_slider__nav">
+                            <picture><source srcset="./img/hats.webp" type="image/webp"><img src="./img/hats.jpg" alt=""></picture>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_slider__r-side">
+                    <div class="main_slider__tit">Футболка для <br>дома Магнитка</div>
+                    <ul class="main_slider__list">
+                        <li>Размер: XS, S, L, XL, XXL, XXXL</li>
+                        <li>Состав: Хлопок, эластен</li>
+                        <li>Цвет: Красный, зелёный</li>
+                    </ul>
+                    <div class="main_slider__btn" data-modal-id="1">Описание</div>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button main_slider__button--color">Купить на ozon</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="main_slider__button">Купить на Wildberries</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="main_red">
+    <div class="main_red__in center_block">
+        <div class="main_red__l-side">
+            <div class="main_red__img">
+                <picture><source srcset="./img/r1.webp" type="image/webp"><img src="./img/r1.jpg" alt=""></picture>
+            </div>
+            <div class="main_red__img">
+                <picture><source srcset="./img/r2.webp" type="image/webp"><img src="./img/r2.jpg" alt=""></picture>
+            </div>
+            <div class="main_red__img">
+                <picture><source srcset="./img/r3.webp" type="image/webp"><img src="./img/r3.jpg" alt=""></picture>
+            </div>
+        </div>
+        <div class="main_red__r-side">
+            <div class="main_red__title">Более 15-ти лет занимаемся
+                Брендом «Магнитка»</div>
+            <div class="main_red__text">
+                <p>Товар из каталога возможно доставить (при наличии) с удаленного склада. Срок поставки - от 1 до 20 рабочих дней. Оформить заказ можно на сайте, а также в любом розничном магазине сети «На Вкус и Цвет» и по телефону нашей горячей линии: 8 (800) 4444-111. Звонок бесплатный.</p>
+                <p>Товар из каталога возможно доставить (при наличии) с удаленного склада. Срок поставки - от 1 до 20 рабочих дней.</p>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="main_gallery">
+    <div class="main_gallery__in center_block">
+        <div class="main_gallery__title">Создаем мерчи, которые облетели весь мир</div>
+        <div class="main_gallery__blocks">
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+            <div class="main_gallery__block">
+                <picture><source srcset="./img/man.webp" type="image/webp"><img src="./img/man.jpg" alt=""></picture>
+            </div>
+        </div>
+        <div class="main_gallery__more">
+            <div class="main_gallery__btn">Показать ещё</div>
+        </div>
+    </div>
+</div>
+        </main>
+        <footer class="footer">
+    <div class="footer__anim" v-if="sizes.window >= 1023">
+        <picture><source srcset="./img/foot_cap.webp" type="image/webp"><img src="./img/foot_cap.png" alt=""></picture>
+    </div>
+    <div class="footer__top">
+        <div class="footer__in center_block">
+            <div class="footer__l-side">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="footer__btn footer__btn--color">Перейти на ozon</a>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="footer__btn">Перейти на Wildberries</a>
+                <a href="mailto:info@navkusicvet.ru" class="footer__mail">info@navkusicvet.ru</a>
+                <div class="footer__adr">Магнитогорск, Маркса 129А</div>
+            </div>
+            <div class="footer__r-side">
+                <img src="./img/logo.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <nav class="footer__menu">
+        <ul>
+            <li><a href="#cap_slide">Кепки</a></li>
+            <li><a href="#badges_slide">Значки</a></li>
+            <li><a href="#hats_slide">Шапки</a></li>
+            <li><a href="#clothes_slide">Одежда</a></li>
+        </ul>
+    </nav>
+    <div class="footer__bottom">
+        <div class="footer__bottom--in center_block">
+            <div class="footer__copy">Мерч города Магнитогорск. <br>Магниты. Бейсболки. Шапки. Одежда</div>
+            <div class="footer__dev">Сайт разработан: <a href="#" target="_blank" rel="noopener noreferrer">SimonovMarketing</a></div>
+        </div>
+    </div>
+</footer>
+        <div class="modal" data-modal="1">
+    <div class="modal__in">
+        <div class="modal__closer"></div>
+        
+    </div>
+</div>
+    </div>
+    <script src="js/app.min.js?_v=20240603165811"></script>
+</body>
+</html>
