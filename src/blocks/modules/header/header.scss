@@ -9,6 +9,9 @@
     @media all and (max-width: 1023px) {
         padding-top: 15px;
         background-size: 1024px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     &__star {
         position: absolute;
@@ -24,7 +27,8 @@
             height: 200px;
             margin-left: 0;
             left: 0;
-            top: 50px;
+            top: 50%;
+            margin-top: -100px;
         }
     }
     &__menu {
@@ -72,6 +76,8 @@
         margin-right: auto;
         @media all and (max-width: 1023px) {
             max-width: 350px;
+            margin-top: 50%;
+            margin-bottom: auto;
         }
         img {
             width: 100%;
