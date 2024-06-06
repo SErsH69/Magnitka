@@ -13,6 +13,7 @@
     <div class="header__burger" :class="{'isOpened': header.isMobileMenuOpened}" v-if="sizes.window <= 1023">
         <div class="header__burger--icon" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
         <div class="header__burger--body">
+            <div class="header__burger--close" @click.prevent="header.toogleMobileMenu.apply(header)"></div>
             <nav class="header__burger--menu">
                 <ul>
                     <li><a @click="header.toogleMobileMenu.apply(header)" href="#cap_slide">Кепки</a></li>

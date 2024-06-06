@@ -62,6 +62,33 @@
     }
     &__block {
         display: none;
+        position: relative;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            background: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24.7913 24.7913L31.1663 31.1663M10.6247 15.583H20.5413M15.583 10.6247V20.5413M28.333 15.583C28.333 12.2015 26.9897 8.95849 24.5986 6.5674C22.2075 4.17631 18.9645 2.83301 15.583 2.83301C12.2015 2.83301 8.95849 4.17631 6.5674 6.5674C4.17631 8.95849 2.83301 12.2015 2.83301 15.583C2.83301 18.9645 4.17631 22.2075 6.5674 24.5986C8.95849 26.9897 12.2015 28.333 15.583 28.333C18.9645 28.333 22.2075 26.9897 24.5986 24.5986C26.9897 22.2075 28.333 18.9645 28.333 15.583Z' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E") 50% / 100% no-repeat;
+            width: vw(34);
+            height: vw(34);
+            pointer-events: none;
+            top: 50%;
+            left: 50%;
+            margin-top: vw(-16);
+            margin-left: vw(-16);
+            opacity: 0;
+            @media all and (max-width: 1023px) {
+                width: 34px;
+                height: 34px;
+                margin-top: -16px;
+                margin-left: -16px;
+            }
+        }
+        &:hover {
+            &:before {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
         img {
             width: 100%;
             height: 100%;
@@ -72,7 +99,7 @@
             height: vw(364);
             @media all and (max-width: 1023px) {
                 grid-area: 1 / 1 / 4 / 2;
-                height: 216px;
+                height: 100%;
             }
         }
         &:nth-child(2) {
@@ -80,7 +107,10 @@
             height: vw(228);
             @media all and (max-width: 1023px) {
                 grid-area: 1 / 2 / 3 / 3;
-                height: 134px;
+                height: 268px;
+            }
+            @media all and (max-width: 640px) {
+                height: 150px;
             }
         }
         &:nth-child(3) {
@@ -88,7 +118,10 @@
             height: vw(114);
             @media all and (max-width: 1023px) {
                 grid-area: 3 / 2 / 4 / 3;
-                height: 68px;
+                height: 216px;
+            }
+            @media all and (max-width: 640px) {
+                height: 150px;
             }
         }
         &:nth-child(4) {
@@ -96,7 +129,10 @@
             height: vw(364);
             @media all and (max-width: 1023px) {
                 grid-area: 4 / 1 / 6 / 2;
-                height: 111px;
+                height: 222px;
+            }
+            @media all and (max-width: 640px) {
+                height: 150px;
             }
         }
         &:nth-child(5) {
@@ -104,7 +140,10 @@
             height: vw(114);
             @media all and (max-width: 1023px) {
                 grid-area: 6 / 1 / 7 / 2;
-                height: 55px;
+                height: 216px;
+            }
+            @media all and (max-width: 640px) {
+                height: 150px;
             }
         }
         &:nth-child(6) {
@@ -112,7 +151,7 @@
             height: vw(228);
             @media all and (max-width: 1023px) {
                 grid-area: 4 / 2 / 7 / 3;
-                height: 180px;
+                height: 100%;
             }
         }
         &:nth-child(7) {

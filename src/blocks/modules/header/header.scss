@@ -4,6 +4,8 @@
     background: #1D1D1B url('../img/bg.png') 50% 100% / 100% no-repeat;
     min-height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
     @media all and (max-width: 1023px) {
         padding-top: 15px;
         background-size: 1024px !important;
@@ -88,8 +90,19 @@
             border: 1px solid #343432;
             background: url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_81_25080)'%3E%3Cpath d='M0 11.27V10.27H16V11.27H0ZM0 6.49998V5.49998H16V6.49998H0ZM0 1.72998V0.72998H16V1.72998H0Z' fill='white' /%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_81_25080'%3E%3Crect width='16' height='12' fill='white' /%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E") 50% / 16px no-repeat;
         }
+        &--close {
+            width: 40px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+            width: 46px;
+            margin-top: -32px;
+            height: 32px;
+            border: 1px solid #343432;
+            background: #1E1E1C url("data:image/svg+xml,%3Csvg width='16' height='12' viewBox='0 0 16 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_83_3920)'%3E%3Cpath d='M2.29297 0.707107L3.00008 0L13.7352 10.7351L13.0281 11.4422L2.29297 0.707107Z' fill='white'/%3E%3Cpath d='M3.01433 11.3616L2.34573 10.693L12.9998 0.0389551L13.6684 0.70756L3.01433 11.3616Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_83_3920'%3E%3Crect width='16' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") 50% / 16px no-repeat;
+        }
         &--body {
-            overflow: auto;
             position: fixed;
             z-index: 10;
             right: -100%;
@@ -98,7 +111,7 @@
             margin-right: 15px;
             width: calc(100% - 30px);
             top: 46px;
-            background: #1e1e1c;
+            background: #1E1E1C;
         }
         &.isOpened {
             &:before {

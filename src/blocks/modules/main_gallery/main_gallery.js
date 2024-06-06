@@ -1,3 +1,5 @@
+import lightGallery from 'lightgallery';
+
 const MainGallery = class MainGallery {
     constructor(){}
     initBtn() {
@@ -76,10 +78,21 @@ const MainGallery = class MainGallery {
                 showMoreBlocks();
             });
         }
-
+    }
+    initGallery() {
+        document.addEventListener("DOMContentLoaded", function() {
+            const lightgalleryElements = document.querySelectorAll('.js-light_gal');
+            for (let i = 0; i < lightgalleryElements.length; i++) {
+                lightGallery(lightgalleryElements[i], {
+                    speed: 500,
+                    selector: '.main_gallery__block img'  // Update the selector to target only active blocks
+                });
+            }
+        });
     }
     init() {
         this.initBtn();
+        this.initGallery();
     }
 }
 

@@ -17,6 +17,12 @@ const MainSlider = class MainSlider {
                     {
                         breakpoint: 1023,
                         settings: {
+                            infinite: true
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,
                             infinite: true

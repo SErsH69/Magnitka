@@ -1,6 +1,4 @@
 .main_slider {
-    background: url(../img/bg_slide.png) 0 0 / cover no-repeat;
-    overflow: hidden;
     padding-top: vw(65);
     position: relative;
     padding-bottom: vw(65);
@@ -8,10 +6,45 @@
         padding-top: 0px;
         margin-top: -30px;
         padding-bottom: 0px;
-        background: url(../img/bg_slide_mob.png) 0 0 / cover no-repeat;
     }
-    @media all and (max-width: 640px) {
-        background: url(../img/bg_slide_mob.png) 0 0 / cover no-repeat;
+    &__item {
+        &--white {
+            position: relative;
+            padding-top: vw(237);
+            &:before {
+                content: '';
+                width: 100%;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                height: vw(237);
+                background: #ebebeb url(../img/bg_slide-2.svg) 0 0 / 100% no-repeat;
+                @media all and (max-width: 1023px) {
+                    background-size: 1024px;
+                    height: 100px;
+                }
+            }
+        }
+        &--dark {
+            position: relative;
+            background: #ebebeb;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                left: 0;
+                right: 0;
+                top: vw(-237);
+                height: vw(237);
+                background: url(../img/bg_slide.svg) 0 0 / 100% no-repeat;
+                @media all and (max-width: 1023px) {
+                    background-size: 1024px;
+                    height: 100px;
+                    top: -90px;
+                }
+            }
+        }
     }
     &__in {
         padding-top: vw(80);
@@ -19,6 +52,7 @@
         @media all and (max-width: 1023px) {
             padding-top: 70px;
             padding-bottom: 70px;
+            overflow: hidden;
         }
         &--cap, &--badges {
             border-bottom: 1px solid rgba(30, 30, 28, 0.1);
@@ -32,6 +66,11 @@
             }
             .main_slider__img {
                 background: #e1e1e1;
+            }
+        }
+        &--clothes {
+            @media all and (max-width: 1023px) {
+                padding-bottom: 0;
             }
         }
     }
@@ -55,6 +94,10 @@
                 margin-left: vw(-15);
                 margin-right: vw(-15);
                 @media all and (max-width: 1023px) {
+                    margin-left: -15px;
+                    margin-right: -15px;
+                }
+                @media all and (max-width: 768px) {
                     margin-left: 0;
                     margin-right: 0;
                 }
@@ -64,6 +107,10 @@
                     opacity: 0.2;
                     pointer-events: none;
                     @media all and (max-width: 1023px) {
+                        margin-left: 15px;
+                        margin-right: 15px;
+                    }
+                    @media all and (max-width: 768px) {
                         margin-left: 0;
                         margin-right: 0;
                     }
@@ -188,8 +235,9 @@
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 0;
-            width: 290px;
-            height: 290px;
+            width: 100%;
+            overflow: hidden;
+            height: auto;
         }
         .slick-slide {
             margin: 0 !important;
@@ -269,6 +317,9 @@
                 border-color: #575756;
             }
         }
+    }
+    &__nav {
+        cursor: pointer;
     }
     &__r-side {
         flex: 0 0 vw(290);

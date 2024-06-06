@@ -183,6 +183,9 @@
             }
         }
     }
+    &__nav {
+        cursor: pointer;
+    }
     &__r-side {
         width: 100%;
         padding: vw(40) vw(30) vw(40) vw(35);
