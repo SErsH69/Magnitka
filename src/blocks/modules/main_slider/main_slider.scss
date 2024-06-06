@@ -16,6 +16,7 @@
                 width: 100%;
                 position: absolute;
                 left: 0;
+                pointer-events: none;
                 right: 0;
                 top: 0;
                 height: vw(237);
@@ -34,6 +35,7 @@
                 position: absolute;
                 width: 100%;
                 left: 0;
+                pointer-events: none;
                 right: 0;
                 top: vw(-237);
                 height: vw(237);

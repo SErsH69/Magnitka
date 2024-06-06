@@ -2264,6 +2264,7 @@ textarea {
   width: 100%;
   position: absolute;
   left: 0;
+  pointer-events: none;
   right: 0;
   top: 0;
   height: 12.34375vw;
@@ -2280,6 +2281,7 @@ textarea {
   position: absolute;
   width: 100%;
   left: 0;
+  pointer-events: none;
   right: 0;
   top: -12.34375vw;
   height: 12.34375vw;
