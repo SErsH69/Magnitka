@@ -10,6 +10,7 @@
     &__item {
         &--white {
             position: relative;
+            overflow: hidden;
             padding-top: vw(237);
             &:before {
                 content: '';

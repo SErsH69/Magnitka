@@ -2256,6 +2256,7 @@ textarea {
 
 .main_slider__item--white {
   position: relative;
+  overflow: hidden;
   padding-top: 12.34375vw;
 }
 
